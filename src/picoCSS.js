@@ -17,6 +17,11 @@ var p = {
       i.setAttribute(a, v);
     });
   },
+  animate: function (time, scale, rotate, rotateX, rotateY, translateX, translateY, skewX, skewY) {
+    return this.each(function (i) {
+      i.style.cssText = '-webkit-transition: all ' + time + 's ease-in-out; -webkit-transform: scale(' + scale + ') rotate(' + rotate + 'deg) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translate(' + translateX + 'px, ' + translateY + 'px) skew(' + skewX + 'deg, ' + skewY + 'deg)';
+    });
+  },
   on: function (type, fn) {
     return this.each(function (i) {
       i.addEventListener(type, fn, false);
