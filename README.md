@@ -1,3 +1,37 @@
+This is a fork of picoCSS.
+The following has been changed:
+
+<b>In this fork, pico is chainable:</b>
+
+	p.select("#main").att("class","bumm").css("color:green;");
+
+<b>In this fork, you can reuse a select:</b>
+
+	p.select("#main");
+	p.att("class","bumm");
+	p.css("color:green;");
+
+<b>In this fork, its easier to do something like jQuery each:</b>
+
+	p.select('div').each(function(elm) {
+		p.value = [elm];
+		p.css('background-color:green');
+	});
+
+<b>In this fork, an addClass method have been added:</b>
+
+	p.addClass("bumm");
+
+
+
+
+
+
+
+Below: vladocar's description
+-----
+
+
 picoCSS - really small JavaScript Framework
 -----
 picoCSS is small (0,35kb gzipped & compressed)  JavaScript Library for basic CSS DOM manipulation optimized for webkit browsers(Safari, Chrome) also works in Firefox, Opera without the part of animation. 
